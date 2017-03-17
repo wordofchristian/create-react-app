@@ -55,8 +55,21 @@ module.exports = {
 
   rules: {
     // http://eslint.org/docs/rules/
+
+    // Warn about missing return values in array callback functions.
+    // http://eslint.org/docs/rules/array-callback-return
     'array-callback-return': 'warn',
+    // Warn when case statements are missing a 'default' case.
+    // An explicit comment reading "//no default" can also be written in place of the default case
+    // http://eslint.org/docs/rules/default-case
     'default-case': ['warn', { commentPattern: '^no default$' }],
+    // When using a dot member expression on multiple lines the dot should be placed on the same
+    // line as the property
+    // http://eslint.org/docs/rules/dot-location
+    // Example:
+    //   var foo = object
+    //    .property;
+    //
     'dot-location': ['warn', 'property'],
     eqeqeq: ['warn', 'allow-null'],
     'new-parens': 'warn',
