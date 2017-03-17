@@ -56,7 +56,7 @@ module.exports = {
   rules: {
     // http://eslint.org/docs/rules/
 
-    // Warn about missing return values in array callback functions.
+    // Warn about missing return values in array callback functions. (map, forEach, etc...)
     // http://eslint.org/docs/rules/array-callback-return
     'array-callback-return': 'warn',
     // Warn when case statements are missing a 'default' case.
@@ -71,7 +71,13 @@ module.exports = {
     //    .property;
     //
     'dot-location': ['warn', 'property'],
+    // Prefer the use of strict equality checks "===" and "!==". With the exception of comparing
+    // things to "null"
+    // http://eslint.org/docs/rules/eqeqeq
     eqeqeq: ['warn', 'allow-null'],
+    // invocation of constructors should always have parentheses.
+    // var person = new Person()
+    // http://eslint.org/docs/rules/new-parens
     'new-parens': 'warn',
     'no-array-constructor': 'warn',
     'no-caller': 'warn',
